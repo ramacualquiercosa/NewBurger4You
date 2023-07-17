@@ -1,6 +1,7 @@
 import { Disclosure } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { useState } from "react";
+import logo from "../assets/img/burger4you.svg";
 
 const navigation = [
   { name: "Inicio", href: "/Home", current: false },
@@ -59,15 +60,15 @@ export default function Navbar({
                   <a href="/home">
                     <img
                       className="block  h-8 w-auto lg:hidden"
-                      src={require("../assets/img/logo3.png")}
-                      alt="Your Company"
+                      src={logo}
+                      alt="Burgers 4 you"
                     />
                   </a>
 
                   <a href="/home">
                     <img
                       className="hidden h-9 w-auto lg:block"
-                      src={require("../assets/img/logo3.png")}
+                      src={logo}
                       alt="Burgers 4 you"
                     />
                   </a>
