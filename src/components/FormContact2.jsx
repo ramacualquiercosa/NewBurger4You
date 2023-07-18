@@ -13,7 +13,7 @@ function FormContact2() {
         <div className="text-white lg:mx-6 lg:w-1/2">
             <h1 className="text-3xl font-semibold capitalize lg:text-5xl">Contáctanos</h1>
 
-            <p className="mt-6 max-w-xl">Ask us everything and we would love to hear from you</p>
+            <p className="mt-6 max-w-xl">Escribenos y ponte en contacto con nosotros</p>
 
             <div className="mt-6 space-y-8 md:mt-8">
             <p className="-mx-2 flex items-start">
@@ -43,7 +43,7 @@ function FormContact2() {
             </div>
 
             <div className="mt-6 md:mt-8">
-            <h3 className="text-gray-300">Seguinos</h3>
+            <h3 className="text-gray-300">Siguenos</h3>
 
             <div className="-mx-1.5 mt-4 flex">
                 <a className="mx-1.5 transform text-white transition-colors duration-300 hover:text-blue-500" href="https://twitter.com/">
@@ -77,25 +77,25 @@ function FormContact2() {
 
         <div className="mt-8 lg:mx-6 lg:w-1/2">
             <div className="mx-auto w-full overflow-hidden rounded-xl bg-red-900 px-8 py-10 shadow-2xl dark:bg-gray-900 lg:max-w-xl">
-            <h1 className="text-2xl font-medium text-white dark:text-gray-200">Contact form</h1>
+            <h1 className="text-2xl font-medium text-white dark:text-gray-200">Escribenos</h1>
 
             <form className="mt-6">
                 <div className="flex-1">
-                <label className="mb-2 block text-sm text-white dark:text-gray-200">Full Name</label>
-                <input type="text" placeholder="Burger 4 U" className="mt-2 block w-full rounded-md border border-gray-200 bg-white px-5 py-3 text-gray-700 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300" />
+                <label className="mb-2 block text-sm text-white dark:text-gray-200">Nombre</label>
+                <input type="text" placeholder="Burger4U" className="mt-2 block w-full rounded-md border border-gray-200 bg-white px-5 py-3 text-gray-700 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300" />
                 </div>
 
                 <div className="mt-6 flex-1">
-                <label className="mb-2 block text-sm text-white dark:text-gray-200">Email address</label>
+                <label className="mb-2 block text-sm text-white dark:text-gray-200">Email</label>
                 <input type="email" placeholder="Burger4U@example.com" className="mt-2 block w-full rounded-md border border-gray-200 bg-white px-5 py-3 text-gray-700 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300" />
                 </div>
 
                 <div className="mt-6 w-full">
-                <label className="mb-2 block text-sm text-white dark:text-gray-200">Message</label>
-                <textarea className="mt-2 block h-32 w-full rounded-md border border-gray-200 bg-white px-5 py-3 text-gray-700 placeholder-gray-400 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300 md:h-48" placeholder="Message"></textarea>
+                <label className="mb-2 block text-sm text-white dark:text-gray-200">Mensaje</label>
+                <textarea className="mt-2 block h-32 w-full rounded-md border border-gray-200 bg-white px-5 py-3 text-gray-700 placeholder-gray-600 focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300 md:h-48" placeholder="Escribenos tu mensaje aquí"></textarea>
                 </div>
 
-                <button className="mt-6 w-full transform rounded-md bg-gray-800 px-6 py-3 text-sm font-medium capitalize tracking-wide text-white transition-colors duration-300 hover:bg-gray-600 focus:outline-none focus:ring focus:ring-blue-400 focus:ring-opacity-50">get in touch</button>
+                <button className="mt-6 w-full transform rounded-md bg-gray-800 px-6 py-3 text-sm font-medium capitalize tracking-wide text-white transition-colors duration-300 hover:bg-gray-600 focus:outline-none focus:ring focus:ring-blue-400 focus:ring-opacity-50">Enviar</button>
             </form>
             </div>
         </div>
