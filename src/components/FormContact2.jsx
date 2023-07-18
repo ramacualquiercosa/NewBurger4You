@@ -24,7 +24,7 @@ function FormContact2() {
   function handleFormSubmit(event) {
     event.preventDefault();
     setSubmitEnabled(false);
-    Alert();
+    Alert()
   }
 
   return (
