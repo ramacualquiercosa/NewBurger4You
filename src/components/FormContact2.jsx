@@ -30,7 +30,7 @@ function FormContact2() {
   return (
     <>
       <section
-        className="min-h-screen max-w-2xl mx-auto bg-black px-4 sm:px-6 lg:max-w-7xl lg:px-8 pt-8"
+        className="min-h-screen max-w-2xl mx-auto bg-black px-4 sm:px-6 lg:max-w-7xl lg:px-8 pt-2"
         data-aos="zoom-in"
       >
         <div className="container mx-auto flex min-h-screen flex-col px-6 py-12">

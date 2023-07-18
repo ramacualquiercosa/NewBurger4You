@@ -14,6 +14,7 @@ return (
         <CarouselProducts/>
         <CarouselPromos/>
         <FormContact2/>
+        {/* <CarouselPrueba/> */}
     </>
 )
 }
