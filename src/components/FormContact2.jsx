@@ -15,7 +15,6 @@ function FormContact2() {
         text: "Nos estaremos comunicando en breve contigo",
         type: "success"
       });
-      // Aquí se habilita nuevamente el botón de "Enviar" después de que el usuario cierra el Alert
       setSubmitEnabled(true);
     } catch (error) {
       console.error(error);
@@ -24,7 +23,6 @@ function FormContact2() {
 
   function handleFormSubmit(event) {
     event.preventDefault();
-    // Aquí se deshabilita el botón de "Enviar" para evitar envíos múltiples hasta que el usuario cierre el Alert
     setSubmitEnabled(false);
     Alert();
   }
