@@ -17,7 +17,7 @@ function Test({
 
   useEffect(() => {
 
-    if (FiltroProducto&&countProducts==0) {
+    if (FiltroProducto&&countProducts===0) {
       console.log (FiltroProducto);
       const element = document.getElementById(FiltroProducto.toUpperCase());
       
@@ -73,7 +73,7 @@ function Test({
             {products.map((item, index) => (
               
             <div >
-              <a id={item.name.split(' ')[0].toUpperCase()}></a>
+              <a href="!#" id={item.name.split(' ')[0].toUpperCase()}>Tope de Categoria</a>
               
                 <div
                   key={index}
