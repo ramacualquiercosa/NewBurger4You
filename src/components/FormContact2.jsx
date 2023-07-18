@@ -14,7 +14,7 @@ function FormContact2() {
         title: "Gracias por tu mensaje",
         text: "Nos estaremos comunicando en breve contigo",
         type: "success",
-      });
+      })
       setSubmitEnabled(true);
     } catch (error) {
       console.error(error);
