@@ -9,7 +9,6 @@ AOS.init();
 export default function CarouselProducts() {
     
   return (
-    
     <div className="max-w-2xl mx-auto  bg-black px-4  sm:px-6  lg:max-w-7xl lg:px-8" data-aos="zoom-in">
         <h2 className="mb-4 text-3xl tracking-tight  text-center text-white dark:text-white">Proba nuestros productos</h2>
         <div id="default-carousel" className="relative" data-carousel="slide">
