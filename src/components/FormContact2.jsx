@@ -1,16 +1,40 @@
-import React from 'react'
+import React, { useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Swal from 'sweetalert2';
 
 AOS.init();
 
 function FormContact2() {
+  const [submitEnabled, setSubmitEnabled] = useState(true);
+
+  async function Alert() {
+    try {
+      await Swal.fire({
+        title: "Gracias por tu mensaje",
+        text: "Nos estaremos comunicando en breve contigo",
+        type: "success"
+      });
+      // Aquí se habilita nuevamente el botón de "Enviar" después de que el usuario cierra el Alert
+      setSubmitEnabled(true);
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+  function handleFormSubmit(event) {
+    event.preventDefault();
+    // Aquí se deshabilita el botón de "Enviar" para evitar envíos múltiples hasta que el usuario cierre el Alert
+    setSubmitEnabled(false);
+    Alert();
+  }
+
   return (
     <>
-    <section className="min-h-screen max-w-2xl mx-auto  bg-black px-4  sm:px-6  lg:max-w-7xl lg:px-8 pt-8" data-aos="zoom-in">
-    <div className="container mx-auto flex min-h-screen flex-col px-6 py-12">
-        <div className="flex-1 lg:-mx-6 lg:flex lg:items-center">
-        <div className="text-white lg:mx-6 lg:w-1/2">
+    <section className="min-h-screen max-w-2xl mx-auto bg-black px-4 sm:px-6 lg:max-w-7xl lg:px-8 pt-8" data-aos="zoom-in">
+        <div className="container mx-auto flex min-h-screen flex-col px-6 py-12">
+          <div className="flex-1 lg:-mx-6 lg:flex lg:items-center">
+            <div className="text-white lg:mx-6 lg:w-1/2">
             <h1 className="text-3xl font-semibold capitalize lg:text-5xl">Contáctanos</h1>
 
             <p className="mt-6 max-w-xl">Escribenos y ponte en contacto con nosotros</p>
@@ -76,34 +100,68 @@ function FormContact2() {
         </div>
 
         <div className="mt-8 lg:mx-6 lg:w-1/2">
-            <div className="mx-auto w-full overflow-hidden rounded-xl bg-red-900 px-8 py-10 shadow-2xl dark:bg-gray-900 lg:max-w-xl">
-            <h1 className="text-2xl font-medium text-white dark:text-gray-200">Escribenos</h1>
+              <div className="mx-auto w-full overflow-hidden rounded-xl bg-red-900 px-8 py-10 shadow-2xl dark:bg-gray-900 lg:max-w-xl">
+                <h1 className="text-2xl font-medium text-white dark:text-gray-200">Escribenos</h1>
 
-            <form className="mt-6">
-                <div className="flex-1">
-                <label className="mb-2 block text-sm text-white dark:text-gray-200">Nombre</label>
-                <input type="text" placeholder="Burger4U" className="mt-2 block w-full rounded-md border border-gray-200 bg-white px-5 py-3 text-gray-700 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300" />
-                </div>
+                <form className="mt-6" onSubmit={handleFormSubmit}>
+                  <div className="flex-1">
+                    <label className="mb-2 block text-sm text-white dark:text-gray-200">Nombre</label>
+                    <input type="text" required placeholder="Burger4U" className="mt-2 block w-full rounded-md border border-gray-200 bg-white px-5 py-3 text-gray-700 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300" />
+                  </div>
 
-                <div className="mt-6 flex-1">
-                <label className="mb-2 block text-sm text-white dark:text-gray-200">Email</label>
-                <input type="email" placeholder="Burger4U@example.com" className="mt-2 block w-full rounded-md border border-gray-200 bg-white px-5 py-3 text-gray-700 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300" />
-                </div>
+                  <div className="mt-6 flex-1">
+                    <label className="mb-2 block text-sm text-white dark:text-gray-200">Email</label>
+                    <input type="email" required placeholder="Burger4U@example.com" className="mt-2 block w-full rounded-md border border-gray-200 bg-white px-5 py-3 text-gray-700 focus:border-blue-400 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300" />
+                  </div>
 
-                <div className="mt-6 w-full">
-                <label className="mb-2 block text-sm text-white dark:text-gray-200">Mensaje</label>
-                <textarea className="mt-2 block h-32 w-full rounded-md border border-gray-200 bg-white px-5 py-3 text-gray-700 placeholder-gray-600 focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300 md:h-48" placeholder="Escribenos tu mensaje aquí"></textarea>
-                </div>
+                  <div className="mt-6 w-full">
+                    <label className="mb-2 block text-sm text-white dark:text-gray-200">Mensaje</label>
+                    <textarea required className="mt-2 block h-32 w-full rounded-md border border-gray-200 bg-white px-5 py-3 text-gray-700 placeholder-gray-600 focus:border-blue-300 focus:outline-none focus:ring focus:ring-blue-300 focus:ring-opacity-40 dark:border-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:focus:border-blue-300 md:h-48" placeholder="Escribenos tu mensaje aquí"></textarea>
+                  </div>
 
-                <button className="mt-6 w-full transform rounded-md bg-gray-800 px-6 py-3 text-sm font-medium capitalize tracking-wide text-white transition-colors duration-300 hover:bg-gray-600 focus:outline-none focus:ring focus:ring-blue-400 focus:ring-opacity-50">Enviar</button>
-            </form>
+                  <button
+                    type="submit"
+                    className="mt-6 w-full transform rounded-md bg-gray-800 px-6 py-3 text-sm font-medium capitalize tracking-wide text-white transition-colors duration-300 hover:bg-gray-600 focus:outline-none focus:ring focus:ring-blue-400 focus:ring-opacity-50"
+                    disabled={!submitEnabled}
+                  >
+                    Enviar
+                  </button>
+                </form>
+              </div>
             </div>
+          </div>
         </div>
-        </div>
-    </div>
-    </section>
+      </section>
     </>
-  )
+  );
 }
 
-export default FormContact2
+export default FormContact2;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
