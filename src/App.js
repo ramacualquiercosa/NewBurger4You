@@ -10,6 +10,7 @@ import Home from "./pages/home";
 import Productos from "./pages/Productos";
 import Contacto from "./pages/contacto";
 import Nosotros from "./pages/Nosotros";
+import { FloatingBotton } from "./components/FloatingBotton";
 
 
 //Contextos
@@ -53,13 +54,15 @@ function App() {
     <>
     <productsContext.Provider value={products}>
       
-            
+    
             <Navbar allProducts={allProducts}
               setAllProducts={setAllProducts}
               total={total}
               setTotal={setTotal}
               countProducts={countProducts}
               setCountProducts={setCountProducts}/>
+           <FloatingBotton/> 
+              
             <Routes>
               <Route exact path="/" element={<Home />} />
               <Route exact path="/Home" element={<Home />} />

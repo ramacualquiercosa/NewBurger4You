@@ -11,9 +11,13 @@ function FormContact2() {
   async function Alert() {
     try {
       await Swal.fire({
-        title: "Gracias por tu mensaje",
-        text: "Nos estaremos comunicando en breve contigo",
-        type: "success",
+        position: 'top-end',
+        icon: 'success',
+        text: 'Tu mensaje ha sido enviado',
+        showConfirmButton: false,
+        timer: 1500,
+        type: "success"
+        
       })
       setSubmitEnabled(true);
     } catch (error) {
