@@ -23,7 +23,7 @@ const features = [
     icon:  ShieldCheckIcon,
   },
   {
-    name: "Nos ubicamos en Buenos Aires, argentina",
+    name: "Nos ubicamos en Buenos Aires, Argentina",
     description:"Nos encontramos en el corazón de Buenos Aires, una ciudad vibrante y apasionante, donde la cultura culinaria es tan diversa como su gente. Nuestra ubicación privilegiada nos permite capturar la esencia de esta ciudad y transmitirla a través de cada hamburguesa que servimos. Si visitas Buenos Aires, no puedes perderte la oportunidad de disfrutar de nuestras especialidades en un ambiente acogedor y lleno de sabores. Nos encontramos en Salta Nº 4632, C.A.B.A., ¡esperamos con ansias tu visita!",
     icon: MapPinIcon,
   },
@@ -40,7 +40,7 @@ function Nosotros() {
           <p className="mt-2 text-2xl font-bold tracking-tight text-white sm:text-2xl">
             Más de 40 años haciendo hamburguesas
           </p>
-          <p className="mt-6 text-lg leading-8 text-white text-justify">
+          <p className="mt-6 text-lg leading-8 text-white text-center">
           Bienvenidos a nuestra hamburguesería, un lugar donde la tradición y la pasión por la comida se fusionan para ofrecerte una experiencia única. Desde nuestros humildes comienzos hace más de 40 años, nos hemos dedicado a perfeccionar cada detalle de nuestras hamburguesas, preservando el auténtico sabor que nos ha caracterizado a lo largo del tiempo. Nuestro legado culinario es el resultado de décadas de dedicación y amor por la gastronomía, y hoy, seguimos comprometidos en brindarte la mejor hamburguesa que puedas encontrar.</p>
         </div>
         <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">

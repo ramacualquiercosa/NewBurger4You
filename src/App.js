@@ -6,11 +6,12 @@ import axios from "axios";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 //Paginas
-import Home from "./pages/home";
+import Home from "./pages/Home";
 import Productos from "./pages/Productos";
-import Contacto from "./pages/contacto";
+import Contacto from "./pages/Contacto";
 import Nosotros from "./pages/Nosotros";
-import { FloatingBotton } from "./components/FloatingBotton";
+import { FloatingBotton } from "./components/FloatingButton";
+import ConfirmarCompra from "./pages/ConfirmarCompra";
 
 
 //Contextos
@@ -22,31 +23,80 @@ function App() {
 
 
 
-  const [allProducts, setAllProducts] = useState([]);
-	const [total, setTotal] = useState(0);
-	const [countProducts, setCountProducts] = useState(0);
+  const [allProducts, aa] = useState(
+    JSON.parse(localStorage.getItem("productsCart")) || []
+       );
+
+	const [total, setTotal] = useState(calcularTotal);
+	const [countProducts, setCountProducts] = useState(contarItems);
 
 
+  function clearCart () {
+    aa([]);
+    setTotal(0);
+    setCountProducts(0);
+    localStorage.removeItem('productsCart');
+  };
+
+function contarItems(){
+  let itemsCarrito = JSON.parse(localStorage.getItem("productsCart")) || [];
+  let tot = 0;
+  for(let i of itemsCarrito){
+    tot += i.quantity;
+  } 
+  return tot;
+}
+
+function calcularTotal(){
+  let itemsCarrito = JSON.parse(localStorage.getItem("productsCart")) || [];
+  let tot = 0;
+  for(let i of itemsCarrito){
+    tot += i.quantity * i.price;
+  } 
+  return tot;
+}
+
+
+function setAllProducts(products) {
+
+  localStorage.setItem('productsCart', JSON.stringify(products));
+
+  //setCountProducts(777);
+
+  console.log(products);
+  aa(products)
+
+}
 
 
   //Estados
     const [products, setProducts] = useState([]);
   
 
-  useEffect(() => {
-    
-    getProducts();
-    
+  useEffect(() => {    
+    getProducts();    
   }, []);
 
- //Fetch
-  
+ //Fetch  
   async function getProducts() {
-    const respProducts = await axios.get("https://products-736ef-default-rtdb.firebaseio.com/products.json");
+    const respProducts = await axios.get("https://burger4you-77ef8-default-rtdb.firebaseio.com/products.json");
     setProducts(respProducts.data);
   }
 
+  async function postCart(objCart) {
+   
+    console.log("ENVIAR OBJ");
+    console.log(objCart);
 
+    await axios
+    .post("https://burger4you-77ef8-default-rtdb.firebaseio.com/shoppingcart.json",       
+       objCart
+    )
+    .then((response) => {
+      //console.log(response.data);
+      return  response.data;
+    });    
+  }
 
 
   
@@ -60,7 +110,9 @@ function App() {
               total={total}
               setTotal={setTotal}
               countProducts={countProducts}
-              setCountProducts={setCountProducts}/>
+              setCountProducts={setCountProducts}
+              clearCart={clearCart}
+              />
            <FloatingBotton/> 
               
             <Routes>
@@ -68,6 +120,13 @@ function App() {
               <Route exact path="/Home" element={<Home />} />
               <Route exact path="/Contacto" element={<Contacto/>} />
               <Route exact path="/Nosotros" element={<Nosotros/>} />
+              <Route exact path="/ConfirmarCompra" element={<ConfirmarCompra
+              allProducts={allProducts}
+              postCart={postCart}
+              total={total}
+              countProducts={countProducts}
+              clearCart={clearCart}
+              />} />
               <Route exact path="/Productos" element={<Productos 
               allProducts={allProducts}
               setAllProducts={setAllProducts}

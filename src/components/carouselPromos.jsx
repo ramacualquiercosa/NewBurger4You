@@ -38,7 +38,7 @@ export default function CarouselPromos() {
    
     return (
         <>
-        <h2 className=" text-3xl tracking-tight  text-center text-white dark:text-white pt-10" data-aos="zoom-in">Promos especiales</h2>
+        <h2 className=" text-4xl tracking-tight  text-center text-white dark:text-white pt-10" data-aos="zoom-in">Promos especiales</h2>
         <div className='max-w-[1200px] h-[500px] w-full m-auto py-7 px-4 relative group' data-aos="zoom-in">
             
         <div
