@@ -7,17 +7,17 @@ export default function CarouselProducts() {
         {
           url: carouselImg[1],
           name: "Hamburguesas",
-          ref: "/Productos?item=Burger"
+          ref: "/Productos?item=Hamburguesas"
         },
         {
           url: carouselImg[4],
           name: "Bebidas",
-          ref: "/Productos?item=Drink"
+          ref: "/Productos?item=Bebidas"
         },
         {
           url: carouselImg[5],
           name: "Entradas",
-          ref: "/Productos?item=Chip"
+          ref: "/Productos?item=Entradas"
         }
       ];
     
@@ -38,7 +38,7 @@ export default function CarouselProducts() {
      
     return (
         <>
-        <h2 className=" text-3xl tracking-tight  text-center text-white dark:text-white" data-aos="zoom-in">Proba nuestros productos</h2>
+        <h2 className=" text-4xl tracking-tight  text-center text-white dark:text-white" data-aos="zoom-in">Proba nuestros productos</h2>
         <div className='max-w-[1200px] h-[500px] w-full m-auto py-7 px-4 relative group' data-aos="zoom-in">
             
         <div

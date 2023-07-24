@@ -1,5 +1,5 @@
 import React from "react";
-import Cards from "../components/Cards";
+import ProductCards from "../components/ProductCards";
 
 function Productos({
   allProducts,
@@ -14,7 +14,7 @@ function Productos({
 
   return (
     <>
-      <Cards
+      <ProductCards
         FiltroProducto={search}
         allProducts={allProducts}
         setAllProducts={setAllProducts}
