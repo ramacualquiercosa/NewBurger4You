@@ -12,7 +12,7 @@ function LayoutInicial() {
 		<div className="container mx-auto text-left text-white">
 			<div className="flex items-center">
 				<div className="w-1/2">
-					<h1 className="text-5xl font-medium mb-6 ">Sobre Nosotros</h1>
+					<h1 className="text-5xl font-medium mb-6 text-center">Sobre Nosotros</h1>
 					<p className="text-xl mb-12 text-justify ">En nuestra hamburguesería, la historia de sabor y calidad se entrelaza con el compromiso de crear una experiencia inolvidable para nuestros clientes. Desde nuestros humildes comienzos, nos hemos esforzado por perfeccionar cada hamburguesa, fusionando técnicas tradicionales con un toque contemporáneo. </p>
 					<a href="/Nosotros" className="mt-6 w-full transform rounded-md bg-gray-800 px-6 py-3 text-sm font-medium capitalize tracking-wide text-white transition-colors duration-300 hover:bg-gray-600 focus:outline-none focus:ring focus:ring-blue-400 focus:ring-opacity-50">Ver Mas</a>
 				</div>
