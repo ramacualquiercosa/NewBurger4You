@@ -7,7 +7,7 @@ export default function Footer() {
           <nav className="flex flex-wrap justify-center -mx-5 -my-2">
             <div className="px-5 py-2">
               <a
-                href="/"
+                href="/Home"
                 className="text-sm leading-6 text-slate-100 hover:text-gray-900"
               >
                 Inicio

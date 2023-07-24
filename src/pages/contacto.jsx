@@ -1,10 +1,10 @@
 import React from "react";
-import FormContact2 from "../components/FormContact2";
+import FormContact from "../components/FormContact";
 
 function Contacto () {
 return (
     <>
-        <FormContact2/>
+        <FormContact/>
     </>
 )}
 
