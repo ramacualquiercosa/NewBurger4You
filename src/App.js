@@ -64,7 +64,7 @@ function setAllProducts(products) {
   //setCountProducts(777);
 
   console.log(products);
-  aa(products)
+  aa(products);
 
 }
 
