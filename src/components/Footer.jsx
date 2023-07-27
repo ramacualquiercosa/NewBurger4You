@@ -41,7 +41,7 @@ export default function Footer() {
           <div className="flex justify-center mt-8 space-x-6">
                  
             <a
-              href="https://github.com/ramacualquiercosa/burger4you"
+              href="https://github.com/ramacualquiercosa/NewBurger4You"
               className="text-sm leading-6 text-slate-100  hover:text-gray-500"
             >
               <span className="sr-only">GitHub</span>
